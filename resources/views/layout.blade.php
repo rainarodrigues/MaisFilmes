@@ -9,14 +9,11 @@
 	<body>
 		<div class="container">
 			<div class="jumbotron">
-				<h1>filmes</h1>
+				<!-- O Blade utiliza o conceito de seções. Sendo assim, podemos definir o que entrará em cada ponto da página. -->
+				<!-- Isso significa que nós teremos um layout contendo uma estrutura, e dentro dessa estrutura teremos partes que serão informadas pelo arquivo que a utilizará. -->
+				<h1>@yield('cabecalho')</h1>
 			</div>
-			<a href="/filmes/criar" class="btn btn-dark mb-2">Adicionar</a>
-			<ul class="list-group">
-    			<?php foreach ($filmes as $filme): ?>
-    				<li class="list-group-item"><?= $filme; ?></li>
-    			<?php endforeach; ?>
-    		</ul>
+			@yield('conteudo')
 		</div>
 	</body>
 </html>
