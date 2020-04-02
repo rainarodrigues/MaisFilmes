@@ -14,7 +14,10 @@ class CriarTabelaFilmes extends Migration
     public function up()
     {
         schema::create('Filmes', function(Blueprint $table ){
+        $table->increments('id');
         $table->string('nome');
+
+    
         });
     }
 
@@ -25,6 +28,6 @@ class CriarTabelaFilmes extends Migration
      */
     public function down()
     {
-        schema::drop('Filmes');
+         schema::drop('Filmes');
     }
 }
